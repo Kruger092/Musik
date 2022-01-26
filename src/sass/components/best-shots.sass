@@ -1,0 +1,125 @@
+.best-shots
+  margin-top: 191px
+  padding: 160px 0 120px
+  background: rgba(252, 82, 82, 0.05)
+  overflow-x: hidden
+  +r(769)
+    margin-top: 96px
+    padding: 80px 0 60px
+
+  .container
+    position: relative
+
+  &__background-img
+    position: absolute
+    left: 93px
+    top: -159px
+    +r(769)
+      top: -30px
+      width: 250px
+      height: 250px
+
+  &__title
+    margin-bottom: 60px
+  
+  &__img
+    width: 370px
+    height: 370px
+    margin-bottom: 24px
+    +r(1200)
+      width: 290px
+      height: 290px
+    +r(899)
+      width: 370px
+      height: 370px
+    +r(545)
+      width: 300px
+      height: 300px
+
+  &__card
+    opacity: .3
+    +r(900)
+      display: flex
+      align-items: center
+      flex-direction: column
+
+  &__reaction
+    display: flex
+    justify-content: space-between
+    width: 160px
+    margin-bottom: 8px
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    
+    &_wrapper
+      display: flex
+      align-items: center
+    svg
+      margin-right: 8px
+  
+  &__descr
+    margin-bottom: 8px
+    font-size: 16px
+    line-height: 24px
+
+  &__hashtags
+    font-size: 16px
+    line-height: 24px
+    opacity: .5
+
+  .best-shots-swiper-js
+    position: relative
+    width: 1170px
+    margin: 0 auto
+    +r(1200)
+      width: 870px
+    +r(900)
+      width: 450px
+    +r(545)
+      width: 300px
+
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom
+    position: absolute
+    top: 31%
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 56px
+    height: 56px
+    background: $white
+    border-radius: 50%
+    cursor: pointer
+    z-index: 50
+
+    svg
+      height: 18px
+      width: 11px
+
+  .swiper-button-next-custom
+    left: -187px
+    +r(1600)
+      left: -95px
+    +r(1100)
+      left: 0px
+    +r(899)
+      left: -40px
+    +r(545)
+      display: none
+
+  .swiper-button-prev-custom
+    right: -187px
+    transform: rotate(-180deg)
+    +r(1600)
+      right: -95px
+    +r(1100)
+      right: 0px
+    +r(899)
+      right: -40px
+    +r(545)
+      display: none
+
+  .swiper-slide-active, .swiper-slide-next, .swiper-slide-prev
+    .best-shots__card
+      opacity: 1

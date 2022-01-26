@@ -1,0 +1,98 @@
+.introduction
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	height: 100vh
+	padding-bottom: 50px
+	background-image: url(../img/jpg/introduction.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	color: $white
+	+r(600)
+		padding-bottom: 25px
+
+	&__timer
+		max-width: 1450px
+		line-height: 176px
+		width: 100%
+		text-align-last: justify
+		font-weight: 700
+		font-size: 144px
+		color: rgba(0, 0, 0, 0)
+		-webkit-text-stroke: 2px rgba(255,255 ,255 , 0.5)
+		+r(1500)
+			width: 100%
+			padding: 0 40px
+		+r(1300)
+			font-size: 114px
+		+r(900)
+			font-size: 90px
+		+r(675)
+			font-size: 72px
+		+r(600)
+			font-size: 52px
+		+r(450)
+			font-size: 32px
+
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: 25vh
+		max-width: 970px
+		gap: 40px
+
+	&__title
+		text-transform: capitalize
+		text-align: center
+		+r(900)
+			font-size: 52px
+			line-height: 67px
+		+r(425)
+			font-size: 32px
+			line-height: 47px
+		&_special
+			color: $peach
+
+	&__subtitle
+		text-align: center
+		font-size: 24px
+		line-height: 38px
+		font-weight: 400
+		+r(900)
+			font-size: 16px
+			line-height: 24px
+		
+	&__buttons
+		display: flex
+		gap: 45px
+
+	&__btn-start
+		display: flex
+		align-items: center
+		background: $red
+		padding: 18px 34px
+		border-radius: 8px
+		font-weight: 700
+		font-size: 16px
+		line-height: 20px
+		+r(400)
+			padding: 9px 17px
+			font-size: 12px
+
+	&__btn-watch
+		display: flex
+		align-items: center
+		gap: 25px
+		background: none
+		font-weight: 800
+		font-size: 20px
+		line-height: 28px
+		+r(400)
+			gap: 10px
+			font-size: 16px
+			line-height: 24px
+
+

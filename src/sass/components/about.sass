@@ -1,0 +1,61 @@
+.about
+  position: relative
+  padding: 120px 0
+  +r(769)
+    padding: 60px 0
+  .f
+    +r(1024)
+      flex-direction: column
+
+  &__background-img
+    position: absolute
+    bottom: 90px
+    left: 93px
+    +r(1700)
+      display: none
+
+  &__img
+    width: 530px
+    margin-right: 70px
+    +r(1024)
+      width: 50%
+      margin-right: 0
+      margin-bottom: 30px
+    img
+      width: 530px
+      height: 570px
+      +r(1024)
+        width: 100%
+        height: auto
+        margin: 0 auto
+  
+  &__text
+    width: 570px
+    +r(1024)
+      width: 100%
+      text-align: center
+      margin-bottom: 30px
+      margin-right: 0
+
+  &__title
+    margin-bottom: 32px
+
+  &__descr
+    margin-bottom: 80px
+    color: $black_70
+
+  &__btn
+    display: flex
+    align-items: center
+    width: fit-content
+    padding: 20px 34px
+    border-radius: 8px
+    background: $blue
+    color: $white
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    +r(1024)
+      margin: 0 auto
+    svg
+      margin-left: 12px

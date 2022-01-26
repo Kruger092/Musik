@@ -1,0 +1,88 @@
+.testimonials
+  padding-bottom: 191px
+  text-align: center
+  overflow-x: hidden
+
+  &__wrapper
+    width: 100%
+
+  &__person
+    position: absolute
+    bottom: -150px
+    right: 40%
+    +r(630)
+      right: 37%
+    +r(500)
+      right: 35%
+    +r(425)
+      right: 30%
+    +r(370)
+      right: 28%
+
+
+  &__card
+    position: relative
+    opacity: .3
+    padding: 50px 60px 110px
+    height: 92px
+    background: $black_03
+    +r(900)
+      margin: 0 10px
+      height: auto
+    +r(630)
+      padding: 25px 40px 55px
+
+  &__text
+    position: relative
+    color: $black_70
+    // margin-bottom: 80px
+    +r(780)
+      margin-bottom: 40px
+    +r(540)
+      margin-bottom: 10px
+    &::before
+      content: ""
+      position: absolute
+      top: -30px
+      left: -30px
+      width: 30px
+      height: 30px
+      background-image: url(../img/quotes.png)
+      +r(630)
+        top: -10px
+
+    &::after
+      content: ""
+      position: absolute
+      bottom: -30px
+      right: -30px
+      width: 30px
+      height: 30px
+      background-image: url(../img/quotes2.png)
+      +r(630)
+        bottom: -10px
+
+
+  &__img
+    height: 120px
+    width: 120px
+    margin-bottom: 20px
+    border-radius: 50%
+    object-fit: cover
+
+  &__url
+    margin-top: 5px
+    font-size: 16px
+    line-height: 24px
+    color: $blue
+
+  .swiper-slide-active
+    .testimonials__card
+      opacity: 1
+      transform: translateY(-10px)
+
+  .testimonials-swiper-js
+    margin: 60px auto 0
+    width: 770px
+    +r(900)
+      width: 100%

@@ -1,0 +1,81 @@
+.category
+  position: relative
+  margin: 240px 0 120px
+  overflow-x: hidden
+  +r(769)
+    margin: 120px 0 60px
+
+  &__background-img
+    position: absolute
+    +r(1700)
+      display: none
+
+    &:first-child
+      top: 40px
+      left: 78px
+    &:nth-child(2)
+      bottom: -105px
+      left: 150px
+    &:nth-child(3)
+      top: 105px
+      right: 160px
+    &:nth-child(4)
+      bottom: 4px
+      right: 53px
+
+  &__card
+    display: block
+    padding: 90px 120px 36px 60px
+    border-radius: 24px
+    svg
+      width: 40px
+      height: 40px
+      margin-bottom: 30px
+    +r(425)
+      padding: 60px 60px 18px 30px
+  
+  &__descr
+    color: $white_70
+
+  &__title
+    margin-bottom: 60px
+  
+  &__card-title
+    margin-bottom: 16px
+  &__unic
+    color: $blue
+    margin-right: 10px
+  
+  .swiper-slide-active
+    .category__card
+      background-color: $blue
+      svg
+        fill: $white
+
+  .category-swiper-js
+    width: 370px
+    margin: 0 auto
+    +r(425)
+      width: 292px
+
+
+.curry-color
+  background-color: $curry_30
+  svg
+    fill: $curry
+.red-color
+  background-color: $red_30
+  svg
+    fill: $red
+.purple-light-color
+  background-color: $purple-light_30
+  svg
+    fill: $purple-light
+.crimson-color
+  background-color: $crimson_30
+  svg
+    fill: $crimson
+.light-blue-color
+  background-color: $light-blue_30
+  svg
+    fill: $light-blue

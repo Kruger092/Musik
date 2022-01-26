@@ -1,0 +1,17 @@
+{% import "data/sponsors-list-data.html" as sponsors %}
+
+<section class="sponsors">
+  <img src="img/Pattern.png" class="sponsors__background-img"/>
+  <img src="img/Confetti.png" class="sponsors__background-second"/>
+  <div class="container">
+    <h2 class="sponsors__title">Our Sponsors</h2>
+    <div class="sponsors__wrapper">
+      {% for sponsors in sponsors.list %}
+        <a class="sponsors__link" href="{{sponsors.url}}">
+          <img src="img/jpg/{{sponsors.title}}.png"/>
+        </a>
+      {% endfor %}
+    </div>
+    <a class="sponsors__btn" href="#">Become a Sponsor</a>
+  <div>
+</section>

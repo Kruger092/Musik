@@ -1,0 +1,25 @@
+{% import "data/header-navigation-data.html" as nav %}
+
+<header class="header">
+  <div class="container f">
+    <div class="header__logo">{{mixins.icon('logo')}}</div>
+    <nav class="header__navigation">
+      <ul class="header__links js-links">
+        {% for list in nav.list %}
+          <li class="header__link">
+            <a href={{list.url}}>
+              {{list.title}}
+              {% if list.dropped %}
+                {{mixins.icon(list.dropped)}}
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="header__burger js-burger"></div>
+      <a class="header__btn" href="#">
+        Get Tickets
+      </a>
+    </nav>
+  </div>
+</header>

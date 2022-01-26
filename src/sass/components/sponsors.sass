@@ -1,0 +1,53 @@
+.sponsors
+  position: relative
+  text-align: center
+  padding: 120px 0 96px
+  +r(769)
+    padding: 60px 0 48px
+
+  &__background-img
+    position: absolute
+    top: 185px
+    left: 0
+    +r(1700)
+      display: none
+  &__background-second
+    position: absolute
+    top: 290px
+    right: 0
+    +r(1700)
+      display: none
+  &__title
+    margin-bottom: 60px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 60px 130px
+    margin-bottom: 80px
+    +r(1200)
+      gap: 30px 30px
+    +r(575)
+      justify-content: center
+
+  &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 170px
+    +r(425)
+      width: 100px
+    img
+      width: 100%
+
+  &__btn
+    display: block
+    margin: 0 auto
+    padding: 18px 34px
+    width: fit-content
+    background: $blue
+    border-radius: 8px
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px

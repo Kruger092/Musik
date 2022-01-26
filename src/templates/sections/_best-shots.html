@@ -1,0 +1,37 @@
+{% import "data/best-shots-list-data.html" as bestShots %}
+
+<section class="best-shots best-shots-swiper-js">
+  <div class="container">
+    <img src="img/Instagram.png" class="best-shots__background-img"/>
+    <h2 class="best-shots__title">See our Best Shots</h2>
+  </div>
+  <div class="best-shots-swiper-js">
+    <div class="best-shots__wrapper swiper-wrapper">
+      {% for item in bestShots.list %}
+        <div class="best-shots__slide swiper-slide">
+          <div class="best-shots__card">
+            <img src="img/jpg/{{item.img}}.jpg" class="best-shots__img"/>
+            <div class="best-shots__reaction">
+              <div class="best-shots__reaction_wrapper">
+                {{mixins.icon('heart')}}
+                <span class="best-shots__reaction_like">
+                  {{item.like}}
+                </span>
+              </div>
+              <div class="best-shots__reaction_wrapper">
+                {{mixins.icon('chat')}}
+                <span class="best-shots__reaction_comments">
+                  {{item.comments}}
+                </span>
+              </div>
+            </div>
+            <p class="best-shots__descr">{{item.title}}</p>
+            <p class="best-shots__hashtags">{{item.hashtags}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <button class="swiper-button-prev-custom">{{mixins.icon('Vector')}}</button>
+    <button class="swiper-button-next-custom">{{mixins.icon('Vector')}}</button>
+  </div>
+</section>

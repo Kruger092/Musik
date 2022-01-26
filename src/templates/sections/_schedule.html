@@ -1,0 +1,139 @@
+{% import "data/schedule-list-data.html" as schedule %}
+{% import "data/schedule-tabs-list-data.html" as tabs%}
+
+<section class="schedule">
+  <img src="img/schedule-confetti.png" class="schedule__background-img"/>
+  <img src="img/schedule-confetti1.png" class="schedule__background-img"/>
+  <img src="img/schedule-confetti2.png" class="schedule__background-img"/>
+  <div class="container">
+    <h2 class="schedule__title">Event Schedule</h2>
+    <ul class="schedule__tabs">
+      {% for tab in tabs.list %}
+        <li class="schedule__tab" data-tab="{{tab.tab}}">
+          <h3>{{tab.day}}</h3>
+          <h5>{{tab.date}}</h5>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="schedule__tablet">
+      <div class="schedule__tablet-header">
+        <div class="schedule__tablet-row">
+          <div class="schedule__tablet-column">
+            Time
+          </div>
+          <div class="schedule__tablet-column">
+            Content
+          </div>
+          <div class="schedule__tablet-column">
+            Speakers
+          </div>
+          <div class="schedule__tablet-column">
+          </div>
+        </div>
+      </div>
+      <div class="schedule__tablet-body" data-index="1">
+        {% for schedule in schedule.list1 %}
+          <div class="schedule__tablet-row">
+            <div class="schedule__tablet-column">
+              <p class="schedule__tablet-column_time">{{schedule.time}}</p>
+            </div>
+            <div class="schedule__tablet-column">
+              <p class="schedule__tablet-column_content">{{schedule.content}}</p>
+            </div>
+            <div class="schedule__tablet-column">
+              {% for speaker in schedule.speakers %}
+                <div class="schedule__tablet-column_speaker">
+                  <img src="img/jpg/{{speaker.img}}.jpg" class="schedule__speaker-img"/>
+                  <div>
+                    <p class="schedule__speaker-name">
+                      {{speaker.name}}
+                    </p>
+                    <p class="schedule__speaker-booth">
+                      Booth:
+                      <span>{{speaker.booth}}</span>
+                    </p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="schedule__tablet-column">
+              <h5 class="schedule__status{{schedule.class}}">
+                {{schedule.status}}
+                {{mixins.icon(schedule.svg)}}
+              </h5>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="schedule__tablet-body" data-index="2">
+        {% for schedule in schedule.list2 %}
+          <div class="schedule__tablet-row">
+            <div class="schedule__tablet-column">
+              <p class="schedule__tablet-column_time">{{schedule.time}}</p>
+            </div>
+            <div class="schedule__tablet-column">
+              <p class="schedule__tablet-column_content">{{schedule.content}}</p>
+            </div>
+            <div class="schedule__tablet-column">
+              {% for speaker in schedule.speakers %}
+                <div class="schedule__tablet-column_speaker">
+                  <img src="img/jpg/{{speaker.img}}.jpg" class="schedule__speaker-img"/>
+                  <div>
+                    <p class="schedule__speaker-name">
+                      {{speaker.name}}
+                    </p>
+                    <p class="schedule__speaker-booth">
+                      Booth:
+                      <span>{{speaker.booth}}</span>
+                    </p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="schedule__tablet-column">
+              <h5 class="schedule__status{{schedule.class}}">
+                {{schedule.status}}
+                {{mixins.icon(schedule.svg)}}
+              </h5>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="schedule__tablet-body" data-index="3">
+        {% for schedule in schedule.list3 %}
+          <div class="schedule__tablet-row">
+            <div class="schedule__tablet-column">
+              <p class="schedule__tablet-column_time">{{schedule.time}}</p>
+            </div>
+            <div class="schedule__tablet-column">
+              <p class="schedule__tablet-column_content">{{schedule.content}}</p>
+            </div>
+            <div class="schedule__tablet-column">
+              {% for speaker in schedule.speakers %}
+                <div class="schedule__tablet-column_speaker">
+                  <img src="img/jpg/{{speaker.img}}.jpg" class="schedule__speaker-img"/>
+                  <div>
+                    <p class="schedule__speaker-name">
+                      {{speaker.name}}
+                    </p>
+                    <p class="schedule__speaker-booth">
+                      Booth:
+                      <span>{{speaker.booth}}</span>
+                    </p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="schedule__tablet-column">
+              <h5 class="schedule__status{{schedule.class}}">
+                {{schedule.status}}
+                {{mixins.icon(schedule.svg)}}
+              </h5>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  <div>
+</section>
+

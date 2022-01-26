@@ -1,0 +1,23 @@
+{% import "data/testimonials-list-data.html" as testimonials %}
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="testimonials__title">Testimonials</h2>
+  </div>
+  <div class="testimonials-swiper-js">
+    <div class="testimonials__wrapper swiper-wrapper">
+      {% for item in testimonials.list %}
+        <div class="testimonials__slide swiper-slide">
+          <div class="testimonials__card">
+            <p class="testimonials__text">{{item.descr}}</p>
+            <div class="testimonials__person">
+              <img src="img/jpg/{{item.img}}.jpg" class="testimonials__img"/>
+              <h4>{{item.title}}</h4>
+              <a href="#" class="testimonials__url">{{item.url}}</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

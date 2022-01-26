@@ -1,0 +1,130 @@
+.schedule
+  position: relative
+  padding-top: 160px
+  background: linear-gradient(180deg,rgba(56, 29, 219, 0.05) 0%, rgba(56, 29, 219, 0) 100%)
+  
+  +r(1024)
+    overflow-x: scroll
+  +r(769)
+    padding-top: 80px
+
+  &__background-img
+    position: absolute
+    +r(1700)
+      display: none
+    &:first-child
+      left: 108px
+      top: 45%
+    &:nth-child(2)
+      right: 75px
+      top: 58%
+    &:nth-child(3)
+      right: 70px
+      top: 66%
+
+  &__title
+    margin-bottom: 60px
+  
+  &__tabs
+    display: flex
+    gap: 30px
+    padding: 0 15px
+    +r(1024)
+      overflow-x: scroll
+      min-width: 900px
+
+  &__tab
+    width: 33%
+    padding-bottom: 20px
+    border-bottom: 4px solid rgba(56, 29, 219, .1)
+    cursor: pointer
+
+    h3, h5
+      pointer-events: none
+      opacity: .5
+    
+    &.active-tab
+      border-bottom: 4px solid $blue
+      color: $blue
+      h3
+        opacity: 1
+    
+  &__tablet
+    margin-top: 35px
+    border: 1px solid #e0e0e0
+    border-radius: 24px
+
+    +r(1024)
+      min-width: 900px
+      overflow-x: scroll
+
+  &__tablet-header
+    border-radius: 24px 24px 0 0
+    background: rgba(56,29,219,.05)
+    font-size: 24px
+    font-weight: 700
+    line-height: 38px
+
+  &__tablet-body
+    display: none
+    &.visible-tabs
+      display: block
+
+  &__tablet-row
+    display: flex
+    justify-content: space-between
+    padding: 40px
+    border-bottom: 1px solid #e0e0e0
+    &:last-child
+      border-bottom: 0
+
+  &__tablet-column
+
+    &_content
+      font-weight: 700
+
+    &_speaker
+      display: flex
+      margin-bottom: 32px
+      &:last-child
+        margin-bottom: 0
+
+    &:first-child
+      width: 240px
+    &:nth-child(2)
+      width: 370px
+    &:nth-child(3)
+      width: 270px
+    &:last-child
+      display: flex
+      align-items: center
+      width: 140px
+      h5
+        display: flex
+        align-items: center
+        cursor: pointer
+      svg
+        width: 24px
+        height: 24px
+        margin-left: 10px
+  
+  &__speaker-img
+    width: 56px
+    height: 56px
+    margin-right: 10px
+    border-radius: 50%
+    object-fit: cover
+
+  &__speaker-name
+    font-weight: 700
+
+  &__speaker-booth
+    opacity: .5
+    span
+      font-weight: 700
+
+  &__status_live
+    color: $red
+    svg
+      fill: $red
+

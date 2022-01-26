@@ -1,0 +1,31 @@
+{% import "data/footer-navigation-data.html" as nav %}
+{% import "data/footer-navigation-soc-data.html" as soc %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__logo">{{mixins.icon('logo')}}</div>
+    <div class="footer__wrapper-navigation">
+      <nav class="footer__navigation">
+        <ul class="footer__navigation-page">
+          {% for link in nav.list %}
+            <li>
+              <a href={{link.url}}>
+                {{link.title}}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul class="footer__navigation-soc">
+          {% for link in soc.list %}
+            <li class="footer__soc-item">
+              <a class="footer__svg-wrapper" href="{{link.url}}">
+                {{mixins.icon(link.title)}}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <p class="footer__signature">© musik.com, 2021</p>
+    </div>
+  </div>
+</footer>

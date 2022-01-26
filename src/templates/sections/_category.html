@@ -1,0 +1,26 @@
+{% import "data/category-list-data.html" as category %}
+
+<section class="category">
+  <img src="img/category-confetti1.png" class="category__background-img"/>
+  <img src="img/category-confetti2.png" class="category__background-img"/>
+  <img src="img/category-confetti3.png" class="category__background-img"/>
+  <img src="img/category-confetti4.png" class="category__background-img"/>
+  <div class="container">
+    <h2 class="category__title">
+      <span class="category__unic">Explore</span>By Category
+    </h2>
+  </div>
+  <div class="category-swiper-js">
+    <div class="category__wrapper swiper-wrapper">
+      {% for category in category.list %}
+        <div class="category__slide swiper-slide">
+          <a href="#" class="category__card {{category.class}}">
+            {{mixins.icon(category.img)}}
+            <h3 class="category__card-title">{{category.title}}</h3>
+            <p class="category__descr">{{category.descr}}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

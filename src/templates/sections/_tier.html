@@ -1,0 +1,25 @@
+{% import "data/tier-data.html" as tier %}
+
+<section class="tier">
+  <img src="img/category-confetti3.png" class="tier__background-img"/>
+  <img src="img/category-confetti4.png" class="tier__background-img"/>
+  <img src="img/tier-confetti.png" class="tier__background-img"/>
+  <div class="container">
+    <h2 class="tier__title">Choose a Tier that’s right for you</h2>
+    <div class="tier__wrapper">
+      {% for item in tier.list %}
+        <div class="tier__card tier__card_{{item.class}}">
+          <div class="tier__border-top"></div>
+          <h2 class="tier__card-title">{{item.title}}</h2>
+          <h1 class="tier__card-price">{{item.price}}</h1>
+          <div class="tier__opportunity-wrapper">
+            <p class="tier__opportunity-{{item.seat}}">1 Seat Available</p>
+            <p class="tier__opportunity-{{item.wifi}}">Access to Wifi Router</p>
+            <p class="tier__opportunity-{{item.food}}">Free Food & Coffee</p>
+          </div>
+          <a class="tier__btn">Get Tickets</a>
+        </div>
+      {% endfor %}
+    </div>
+  <div>
+</section>

@@ -1,0 +1,106 @@
+.singers
+  position: relative
+  padding: 120px 0 288px
+  +r(769)
+    padding: 60px 0 144px
+  .f
+    +r(1024)
+      flex-direction: column-reverse
+
+  &__background-img
+    position: absolute
+    +r(1700)
+      display: none
+    
+    &:first-child
+      right: 0
+      top: 205px
+    &:nth-child(2)
+      left: 140px
+      bottom: 147px
+    &:nth-child(3)
+      right: 117px
+      bottom: 36px
+
+  &__text
+    width: 470px
+    margin-right: 30px
+    +r(1024)
+      width: 100%
+      text-align: center
+      margin-right: 0
+
+  &__title
+    margin-bottom: 32px
+
+  &__descr
+    margin-bottom: 80px
+    color: $black_70
+    font-size: 16px
+    line-height: 24px
+
+  &__btn
+    display: flex
+    align-items: center
+    width: fit-content
+    padding: 20px 34px
+    border-radius: 8px
+    background: $blue
+    color: $white
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    +r(1024)
+      margin: 0 auto
+    svg
+      margin-left: 12px
+  &__img
+    padding-bottom: 40px
+    &_wrapper-bottom, &_wrapper-top
+      display: flex
+      gap: 30px
+      img
+        box-shadow: 3px 26px 25px 8px rgba(34, 60, 80, 0.35)
+        border-radius: 24px
+        object-fit: cover
+    &_wrapper-top
+      align-items: flex-end
+      margin-bottom: 30px
+      img:first-child
+        width: 370px
+        height: 270px
+        +r(900)
+          width: 270px
+          height: 170px
+        +r(500)
+          max-width: 50%
+
+      img:last-child
+        width: 270px
+        margin-bottom: 10px
+        +r(900)
+          width: 170px
+          height: 120px
+        +r(500)
+          max-width: 40%
+
+    &_wrapper-bottom
+      img:first-child
+        width: 270px
+        height: 300px
+        margin-top: 10px
+        +r(900)
+          width: 170px
+          height: 120px
+        +r(500)
+          max-width: 40%
+
+      img:last-child
+        width: 370px
+        height: 270px
+        margin-bottom: 10px
+        +r(900)
+          width: 270px
+          height: 170px
+        +r(500)
+          max-width: 50%

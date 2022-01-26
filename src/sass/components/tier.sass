@@ -1,0 +1,106 @@
+.tier
+  position: relative
+  text-align: center
+  padding: 192px 0 120px
+  +r(769)
+    padding: 96px 0 60px
+
+  &__background-img
+    position: absolute
+    +r(1700)
+      display: none
+    &:first-child
+      left: 154px
+      top: 243px
+    &:nth-child(2)
+      left: 249px
+      top: 378px
+    &:nth-child(3)
+      right: 200px
+      top: 95px
+
+  &__title
+    margin-bottom: 60px
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 30px
+
+    +r(1024)
+      flex-wrap: wrap
+
+  &__card
+    position: relative
+    width: 33%
+    height: 405px
+    padding: 30px 0
+    border-radius: 20px
+    overflow: hidden
+    box-shadow: 0px 20px 100px rgba(34, 34, 34, 0.15)
+    +r(1024)
+      width: 45%
+    +r(600)
+      width: 75%
+
+    &_basic
+      color: $black
+      .tier__border-top
+        background: $black
+
+    &_standard
+      color: $blue
+      .tier__border-top
+        background: $blue
+
+    &_premium
+      color: $red
+      .tier__border-top
+        background: $red
+
+  &__card-title
+    margin-bottom: 15px
+    font-size: 24px
+    font-weight: 800
+    line-height: 38px
+
+  &__card-price
+    font-size: 60px
+    font-weight: 700
+    line-height: 73px
+
+  &__border-top
+    position: absolute
+    top: 0
+    left: 0
+    height: 4px
+    width: 100%
+  
+  &__opportunity-wrapper
+    display: flex
+    flex-direction: column
+    gap: 15px
+    margin-top: 30px
+    margin-bottom: 30px
+    color: $black
+
+  &__opportunity-false
+    opacity: .5
+  
+  &__btn
+    display: block
+    width: 162px
+    height: 56px
+    margin: 0 auto
+    padding: 18px 34px
+    border-radius: 5px
+    border: 1px solid $blue
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    color: $blue
+    &:hover
+      background: $blue
+      color: $white
+      transition: all .3s ease-in-out

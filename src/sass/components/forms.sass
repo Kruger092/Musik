@@ -1,0 +1,135 @@
+.form
+  display: flex
+  margin-top: 120px
+  +r(900)
+    flex-direction: column
+
+  &__background-img
+    position: absolute
+    bottom: 0
+    right: 0
+    pointer-events: none
+    +r(1450)
+      width: auto
+      height: 150px
+
+  &__contact-us
+    position: relative
+    width: 46%
+    padding: 120px 80px
+    background: $blue
+    +r(1024)
+      padding: 60px 40px
+    +r(900)
+      width: 100%
+      height: 630px
+  
+  &__title
+    margin-bottom: 8px
+    color: $white
+
+  &__subtitle
+    margin-bottom: 80px
+    color: $white_70
+    font-size: 24px
+    line-height: 38px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 60px 130px
+    margin-bottom: 80px
+
+  &__link
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    font-size: 18px
+    line-height: 20px
+
+    &:last-child
+      margin-bottom: 0
+
+    svg
+      width: 24px
+      margin-right: 8px
+      fill: $peach
+  
+  &__btn
+    display: block
+    margin: 0 auto
+    padding: 18px 34px
+    width: fit-content
+    background: $blue
+    border-radius: 5px
+  
+  &__details
+    position: relative
+    background: $black_03
+    width: 56%
+    padding: 103px 130px
+    +r(1024)
+      padding: 51px 75px
+    +r(900)
+      width: 100%
+      padding: 60px 40px
+
+  &__background-form
+    position: absolute
+    bottom: 0
+    right: 56px
+  
+  &__details-title
+    margin-bottom: 40px
+
+  &__details
+    display: flex
+    flex-direction: column
+
+    input:placeholder
+      color: $black
+    input::-webkit-input-placeholder
+      color: $black
+    input:-ms-input-placeholder
+      color: $black
+    input::-ms-input-placeholder
+      color: $black
+
+  &__input
+    margin-bottom: 30px
+    padding: 8px 0
+    border-bottom: 1px solid $grey
+    background: 0
+    font-size: 16px
+    line-height: 24px
+    &:focus
+      border-bottom: 1px solid $blue
+
+  &__label
+    color: $black_70
+    font-size: 12px
+    font-weight: 700
+    line-height: 18px
+
+  &__textarea
+    margin-bottom: 40px
+    padding: 8px 0
+    resize: none
+    width: 100%
+    height: 96px
+    background: 0
+    border: 0
+    border-bottom: 1px solid $grey
+    &:focus
+      border-bottom: 1px solid $blue
+
+  &__submit-btn
+    width: 100%
+    height: 56px
+    border-radius: 8px
+    background: $blue
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    color: $white
